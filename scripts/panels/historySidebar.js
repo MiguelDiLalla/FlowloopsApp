@@ -125,16 +125,22 @@ export function initializeHistorySidebar(timerManager) {
    */
   function updateMobileNav(entry) {
     if (!mobileNav) return;
-    
+
+    // Update last entry
     const mobileLast = mobileNav.querySelector('.last-entry');
     if (mobileLast) {
       mobileLast.textContent = `${entry.emoji} Last: +${formatTimeDisplay(entry.duration)}`;
       mobileLast.classList.add('animate-fade-in');
-      
-      // Remove animation class after animation completes
+
       setTimeout(() => {
         mobileLast.classList.remove('animate-fade-in');
       }, 300);
+    }
+
+    // Update total
+    const mobileTotal = mobileNav.querySelector('.total');
+    if (mobileTotal && entry.totalSessionTime) {
+      mobileTotal.textContent = `Total: ${formatTimeDisplay(entry.totalSessionTime)}`;
     }
   }
   

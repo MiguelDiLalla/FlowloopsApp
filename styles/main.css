@@ -208,29 +208,60 @@ h1, h2, h3 {
   width: 100%;
   background-color: #0d9488;
   color: white;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 20;
-  justify-content: space-between;
-  align-items: center;
   font-family: 'Lexend Deca', sans-serif;
 }
 
-.mobile-nav .total {
-  font-weight: 600;
+.mobile-nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.mobile-nav .last-entry {
-  background-color: rgba(255, 255, 255, 0.2);
+.mobile-nav-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.mobile-nav-icon img {
+  border-radius: 6px;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.mobile-time-container {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
   padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
-  font-size: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  max-width: 300px;
+  font-size: 0.85rem;
+}
+
+.mobile-time-container .total,
+.mobile-time-container .last-entry {
+  white-space: nowrap;
+}
+
+/* Animation for updates */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
 }
 
 /* Mobile responsive layout */
 @media (max-width: 768px) {
   body {
-    padding-top: 3.5rem; /* Make room for the fixed mobile nav */
+    padding-top: 5.5rem; /* Increased from 3.5rem to provide more space below the nav bar */
   }
   
   .container {
@@ -256,7 +287,7 @@ h1, h2, h3 {
   
   /* Show mobile nav on small screens */
   .mobile-nav {
-    display: flex;
+    display: block;
   }
   
   .buttons-container {
