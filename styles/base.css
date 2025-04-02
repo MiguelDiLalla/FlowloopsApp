@@ -1,0 +1,25 @@
+/* Typography */
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Montagu Slab', serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #0f172a;
+}
+
+.font-title {
+  font-family: 'Montagu Slab', serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}

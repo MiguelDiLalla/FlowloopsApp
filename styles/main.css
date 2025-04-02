@@ -1,0 +1,363 @@
+/* Typography */
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: 'Montagu Slab', serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #0f172a;
+}
+
+.font-title {
+  font-family: 'Montagu Slab', serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Main container layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  height: 70%; /* Reduced from 80% to 70% */
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Panel Styling */
+.panel {
+  flex: 1;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.25rem; /* Reduced padding from 1.5rem */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  color: #0f172a;
+  max-height: 100%; /* Ensure panels don't exceed container height */
+  overflow-y: auto; /* Add scrolling if content overflows */
+}
+
+/* Title panel styling */
+.title-text {
+  justify-content: flex-start; /* Changed from center to reduce empty space */
+}
+
+.title-text h2 {
+  font-size: 1.75rem; /* Reduced from 2rem */
+  margin-bottom: 0.75rem; /* Reduced from 1rem */
+  color: #0f172a;
+  text-align: center;
+  font-family: 'Montagu Slab', serif;
+  font-weight: 700;
+}
+
+.title-text p {
+  color: #334155;
+  text-align: center;
+}
+
+/* Buttons panel styling */
+.buttons {
+  justify-content: center;
+  background-color: white;
+}
+
+/* Button grid area with run/pause button */
+.buttons-container {
+  display: flex;
+  width: 100%;
+  gap: 0.75rem; /* Reduced from 1rem */
+}
+
+.button-grid {
+  flex: 1;
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  gap: 0.5rem; /* Reduced from 0.75rem */
+}
+
+.button-grid button {
+  padding: 0.5rem; /* Reduced from 0.75rem */
+  border-radius: 0.75rem;
+  border: none;
+  background-color: #0d9488;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.button-grid button:hover {
+  background-color: #0f766e;
+  transform: scale(1.05);
+}
+
+/* Run/pause button styling */
+.run-pause-button {
+  width: 4.5rem; /* Reduced from 5rem */
+  height: 4.5rem; /* Reduced from 5rem */
+  background-color: #f43f5e; /* rose-500 */
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-family: 'Montagu Slab', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.run-pause-button:hover {
+  background-color: #e11d48; /* rose-600 */
+  transform: scale(1.05);
+}
+
+.run-pause-button:active {
+  transform: scale(0.95);
+}
+
+.run-pause-button.running {
+  background-color: #0d9488; /* teal-600 */
+}
+
+.run-pause-button.running:hover {
+  background-color: #0f766e; /* teal-700 */
+}
+
+/* History sidebar styling */
+.history-sidebar {
+  flex: 0.8;
+  background-color: #f1f5f9;
+  border-radius: 1rem;
+  padding: 0.75rem; /* Reduced from 1rem */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #0f172a;
+  max-height: 100%; /* Ensure it doesn't exceed container height */
+  overflow-y: auto; /* Add scrolling if needed */
+}
+
+.history-sidebar .item {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.4rem; /* Reduced from 0.5rem */
+  margin-bottom: 0.4rem; /* Reduced from 0.5rem */
+  font-size: 0.875rem;
+  transition: opacity 0.3s ease;
+}
+
+/* Progressive dimming for history items - from 100% to 5% */
+.history-sidebar .item:nth-child(1) {
+  opacity: 1;
+}
+
+.history-sidebar .item:nth-child(2) {
+  opacity: 0.75;
+}
+
+.history-sidebar .item:nth-child(3) {
+  opacity: 0.5;
+}
+
+.history-sidebar .item:nth-child(4) {
+  opacity: 0.25;
+}
+
+.history-sidebar .item:nth-child(5) {
+  opacity: 0.05;
+}
+
+.history-sidebar .total {
+  font-weight: 600;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* Mobile navigation bar that appears on small screens */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0d9488;
+  color: white;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.mobile-nav .total {
+  font-weight: 600;
+}
+
+.mobile-nav .last-entry {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 768px) {
+  body {
+    padding-top: 3.5rem; /* Make room for the fixed mobile nav */
+  }
+  
+  .container {
+    flex-direction: column;
+    height: auto;
+    max-height: 80vh; /* Reduced from 90vh */
+    overflow-y: auto;
+  }
+  
+  /* Change order of panels on mobile */
+  .panel.buttons {
+    order: 1;
+  }
+  
+  .panel.title-text {
+    order: 2;
+  }
+  
+  /* Hide history sidebar on mobile */
+  .history-sidebar {
+    display: none;
+  }
+  
+  /* Show mobile nav on small screens */
+  .mobile-nav {
+    display: flex;
+  }
+  
+  .buttons-container {
+    flex-direction: row-reverse;
+  }
+  
+  .run-pause-button {
+    width: 3.5rem; /* Reduced from 4rem */
+    height: 3.5rem; /* Reduced from 4rem */
+    font-size: 0.9rem;
+  }
+}
+
+/* Button styling for JS components */
+.flowloop-button {
+  transition: all 0.2s ease;
+}
+
+.flowloop-button:hover {
+  transform: scale(1.05);
+}
+
+.flowloop-button:active {
+  transform: scale(0.95);
+}
+
+.mystery-button {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animation for new entries in history */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+/* Motivational text with typewriter effect */
+.motivational-text {
+  margin-top: 0.75rem; /* Changed from auto to provide specific space */
+  font-style: italic;
+  color: #64748b;
+  min-height: 1.5em;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  position: relative;
+  text-align: left;
+}
+
+/* Typewriter animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes backspace {
+  from { width: 100% }
+  to { width: 0 }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #64748b }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid transparent;
+  width: 0;
+  animation: 
+    typing 2.5s steps(40, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+.typewriter::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+}
+
+.typewriter.typed {
+  border-right-color: #64748b;
+}
+
+.typewriter.deleting {
+  animation: 
+    backspace 1.5s steps(40, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+.fade-out {
+  animation: fade-out 1.5s ease-out forwards;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

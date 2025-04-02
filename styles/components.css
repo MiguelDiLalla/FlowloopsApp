@@ -1,0 +1,183 @@
+/* Title panel styling */
+.title-text {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.title-text h2 {
+  font-size: clamp(1.2rem, 4vw, 1.6rem); /* Further reduced size */
+  margin-bottom: 0.5rem; /* Reduced from 0.75rem */
+  color: #0f172a;
+  text-align: center;
+  font-family: 'Montagu Slab', serif;
+  font-weight: 700;
+}
+
+.title-text p {
+  color: #334155;
+  text-align: center;
+  font-size: clamp(0.9rem, 3vw, 1rem); /* Use clamp for responsive sizing */
+  margin-bottom: 0.5rem; /* Add margin bottom to reduce spacing */
+}
+
+/* Buttons panel styling */
+.buttons {
+  justify-content: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Button styling */
+.button-grid button {
+  padding: 0.1rem; /* Reduced from 0.5rem */
+  border-radius: 0.04rem;
+  border: none;
+  background-color: #0d9488;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Lexend Deca', sans-serif;
+  min-height: 0; /* Allow shrinking */
+  height: 100%; /* Fill available space */
+}
+
+.button-grid button:hover {
+  background-color: #0f766e;
+  transform: scale(1.02);
+}
+
+/* Run/pause button styling */
+.run-pause-button {
+  width: clamp(3rem, 9vw, 4rem); /* Reduced size */
+  height: clamp(3rem, 9vw, 4rem); /* Reduced size */
+  background-color: #f43f5e;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-family: 'Montagu Slab', serif;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 3vw, 1.1rem); /* Use clamp for responsive sizing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.run-pause-button:hover {
+  background-color: #e11d48;
+  transform: scale(1.05);
+}
+
+.run-pause-button:active {
+  transform: scale(0.95);
+}
+
+.run-pause-button.running {
+  background-color: #0d9488;
+}
+
+.run-pause-button.running:hover {
+  background-color: #0f766e;
+}
+
+/* History items */
+.history-sidebar .item {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.3rem; /* Reduced from 0.4rem */
+  margin-bottom: 0.3rem; /* Reduced from 0.4rem */
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem); /* Use clamp for responsive sizing */
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Progressive dimming for history items */
+#log-container .item:nth-child(1) { opacity: 1; }
+#log-container .item:nth-child(2) { opacity: 0.75; }
+#log-container .item:nth-child(3) { opacity: 0.5; }
+#log-container .item:nth-child(4) { opacity: 0.25; }
+#log-container .item:nth-child(5) { opacity: 0.05; }
+
+.history-sidebar > .item:nth-child(1) { opacity: 1; }
+.history-sidebar > .item:nth-child(2) { opacity: 0.75; }
+.history-sidebar > .item:nth-child(3) { opacity: 0.5; }
+.history-sidebar > .item:nth-child(4) { opacity: 0.25; }
+.history-sidebar > .item:nth-child(5) { opacity: 0.05; }
+
+.history-sidebar .total {
+  font-weight: 600;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: clamp(0.8rem, 2.5vw, 1rem); /* Use clamp for responsive sizing */
+}
+
+/* Mobile navigation bar */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0d9488;
+  color: white;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.mobile-nav .total {
+  font-weight: 600;
+}
+
+.mobile-nav .last-entry {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Motivational text container */
+.motivational-text {
+  margin-top: 0.5rem; /* Reduced from 0.75rem */
+  font-style: italic;
+  color: #64748b;
+  min-height: 1.2em; /* Reduced from 1.5em */
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  position: relative;
+  text-align: left;
+  font-size: clamp(0.8rem, 2.5vw, 1rem); /* Use clamp for responsive sizing */
+}
+
+/* Additional button styling */
+.flowloop-button {
+  transition: all 0.2s ease;
+}
+
+.flowloop-button:hover {
+  transform: scale(1.05);
+}
+
+.flowloop-button:active {
+  transform: scale(0.95);
+}
+
+.mystery-button {
+  position: relative;
+  overflow: hidden;
+}

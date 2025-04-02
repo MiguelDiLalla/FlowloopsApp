@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d9488" /> <!-- teal-600 -->
+    <meta name="description" content="A weird minimalist timer to trick you into tracking time." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>FlowLoops</title>
+
+    <!-- Tailwind CDN (can replace with local build) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&family=Montagu+Slab:opsz,wght@16..144,400;16..144,600;16..144,700&display=swap" rel="stylesheet">
+
+    <!-- PWA Meta -->
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" href="./icons/icon-192.png" />
+    
+    <!-- Service Worker Registration -->
+    <script defer>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js');
+      }
+    </script>
+  </head>
+
+  <body class="bg-teal-600 font-sans text-white w-screen h-screen overflow-hidden relative">
+    <!-- Background -->
+    <div id="animated-bg" class="absolute top-0 left-0 w-full h-full z-[-1]">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Mobile Navigation Bar (hidden on desktop) -->
+    <nav class="mobile-nav">
+      <div class="mobile-nav-container">
+        <!-- Page icon (centered) -->
+        <div class="mobile-nav-icon">
+          <i class="fas fa-clock"></i> <!-- Use appropriate icon from your icon set -->
+        </div>
+
+        <!-- Time information container (rounded edges) -->
+        <div class="mobile-time-container">
+          <div class="total">Total: 13 min</div>
+          <div class="last-entry">🍄 Last: +2 min</div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <main class="container">
+      <!-- Left Column: Title Panel -->
+      <div class="panel title-text">
+        <h2>Welcome to FlowLoops</h2>
+        <p>Start your weird and wonderful time tracking adventure. <br/>Stay curious. Stay focused. Stay you.</p>
+      </div>
+
+      <!-- Middle Column: Buttons Panel -->
+      <div class="panel buttons">
+        <div class="buttons-container">
+          <div class="button-grid">
+            <button>--:-- 1</button>
+            <button>--:-- 2</button>
+            <button>--:-- 3</button>
+            <button>--:-- 4</button>
+            <button>--:-- 5</button>
+            <button>--:-- 6</button>
+            <button>--:-- 7</button>
+          </div>
+          <button class="run-pause-button" id="run-pause-btn">Run</button>
+        </div>
+      </div>
+
+      <!-- Right Column: History Sidebar -->
+      <div class="history-sidebar">
+        <div>
+          <div class="item">🍄 +2 min</div>
+          <div class="item">🎯 +7 min</div>
+          <div class="item">🌊 +4 min</div>
+        </div>
+        <div class="total">Total: 13 min</div>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>
