@@ -4,7 +4,7 @@
  */
 
 // Global debug state
-let isDebugMode = true; // Start with debug mode ON
+let isDebugMode = false; // Start with debug mode ON
 let isFastMode = false;
 let updateInterval = null;
 let debugPanelElement = null;
@@ -15,8 +15,8 @@ let debugPanelElement = null;
  * @returns {Object} Debug panel control methods
  */
 export function initializeDebugPanel(timerManager) {
-  // // Add this line at the beginning to toggle off the debug panel 
-  // return { toggle: () => {}, isVisible: () => false }; // Return dummy functions
+  // Add this line at the beginning to toggle off the debug panel 
+  return { toggle: () => {}, isVisible: () => false }; // Return dummy functions
     
   // Create debug panel (visible by default for development)
   createDebugPanel();
