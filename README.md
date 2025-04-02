@@ -1,4 +1,4 @@
-# FlowLoops ⏱️🌐
+# <img src="https://migueldilalla.github.io/assets/branding-elements/flowloops-medium.png" alt="FlowLoops Logo" width="200" height="200" style="vertical-align: middle; margin-right: 10px;"> FlowLoops ⏱️🌐
 
 > A weird little progressive web app to trick you into tracking time — by hiding it.
 
