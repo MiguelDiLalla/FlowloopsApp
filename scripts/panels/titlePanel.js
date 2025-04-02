@@ -69,16 +69,37 @@ export function initializeTitlePanel() {
   
   const subtitle = document.createElement('h2');
   subtitle.className = 'text-xl mb-6 text-black/80';
-  subtitle.textContent = 'Time is a game. Play it.';
+  subtitle.textContent = 'Time is your Friend. Get to know it.';
   subtitle.style.fontFamily = "'Montagu Slab', serif";
   subtitle.style.fontWeight = "600";
   subtitle.style.textAlign = "left";
   
-  const description = document.createElement('p');
+  const description = document.createElement('div');
   description.className = 'text-sm max-w-xs text-black/70';
-  description.textContent = "• Hit Run to trigger a mystery counter. \n • You can handpick your next focus loop \n • A new random option will be generated \n • Track your progress over time";
   description.style.lineHeight = "1.5";
   description.style.fontFamily = "'Lexend Deca', sans-serif";
+  
+  // Create a proper bullet list
+  const bulletList = document.createElement('ul');
+  bulletList.style.listStyleType = 'disc';
+  bulletList.style.paddingLeft = '1.5rem';
+  bulletList.style.marginTop = '0.5rem';
+  
+  // Add bullet points
+  const bulletPoints = [
+    "Hit Run to trigger a mystery counter",
+    "You can handpick your next focus loop",
+    "A new random option will be generated",
+    "Track your progress over time"
+  ];
+  
+  bulletPoints.forEach(point => {
+    const listItem = document.createElement('li');
+    listItem.textContent = point;
+    bulletList.appendChild(listItem);
+  });
+  
+  description.appendChild(bulletList);
   
   // Create container for motivational text with typewriter effect
   const motivationalContainer = document.createElement('div');
