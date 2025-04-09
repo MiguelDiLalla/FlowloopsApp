@@ -227,8 +227,14 @@ export class TimerManager {
    * @private
    */
   #timerComplete() {
-    // Update total session time
-    this.#totalSessionTimeSec += this.#currentDurationSec;
+    console.log('Timer complete - current duration:', this.#currentDurationSec, 
+                'previous total:', this.#totalSessionTimeSec);
+    
+    // Update total session time (ensure it's treated as a number)
+    const prevTotal = this.#totalSessionTimeSec;
+    this.#totalSessionTimeSec = Number(this.#totalSessionTimeSec || 0) + Number(this.#currentDurationSec || 0);
+    
+    console.log('New total session time:', this.#totalSessionTimeSec);
     
     // Trigger notification
     if (this.#notificationManager) {

@@ -44,15 +44,21 @@
     <!-- Mobile Navigation Bar (hidden on desktop) -->
     <nav class="mobile-nav">
       <div class="mobile-nav-container">
-        <!-- Page icon (centered) -->
+        <!-- Left spacer to balance layout -->
+        <div style="width: 42px;"></div>
+        
+        <!-- App icon (centered) -->
         <div class="mobile-nav-icon">
           <img src="./icons/icon-512.png" alt="FlowLoops" width="32" height="32">
         </div>
-
-        <!-- Time information container (rounded edges) -->
+        
+        <!-- Timer indicator (right side) -->
+        <div class="mobile-timer-indicator"></div>
+        
+        <!-- Time information container -->
         <div class="mobile-time-container">
-          <div class="total">Total: 13 min</div>
-          <div class="last-entry">🍄 Last: +2 min</div>
+          <div class="total">Total: 00:00</div>
+          <div class="last-entry"></div>
         </div>
       </div>
     </nav>
