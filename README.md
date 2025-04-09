@@ -2,16 +2,7 @@
 
 > A weird little progressive web app to trick you into tracking time — by hiding it.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PWA Ready](https://img.shields.io/badge/PWA-Ready-blue)](https://migueldilalla.github.io/not-pomodoro-app/)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-brightgreen)](https://migueldilalla.github.io/not-pomodoro-app/)
-[![Vanilla JS](https://img.shields.io/badge/Vanilla-JS-yellow)](http://vanilla-js.com/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![ES Modules](https://img.shields.io/badge/ES-Modules-F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
-[![Works Offline](https://img.shields.io/badge/Works-Offline-green)](https://migueldilalla.github.io/not-pomodoro-app/)
-[![No Dependencies](https://img.shields.io/badge/Dependencies-None-brightgreen)](https://migueldilalla.github.io/not-pomodoro-app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![PWA Ready](https://img.shields.io/badge/PWA-Ready-blue)](https://migueldilalla.github.io/not-pomodoro-app/) [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-brightgreen)](https://migueldilalla.github.io/not-pomodoro-app/) [![Vanilla JS](https://img.shields.io/badge/Vanilla-JS-yellow)](http://vanilla-js.com/) [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) [![ES Modules](https://img.shields.io/badge/ES-Modules-F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) [![Works Offline](https://img.shields.io/badge/Works-Offline-green)](https://migueldilalla.github.io/not-pomodoro-app/) [![No Dependencies](https://img.shields.io/badge/Dependencies-None-brightgreen)](https://migueldilalla.github.io/not-pomodoro-app/)
 
 ## 🌀 What is FlowLoops?
 
